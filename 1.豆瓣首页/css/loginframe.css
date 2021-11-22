@@ -1,0 +1,264 @@
+@import "./reset.css";
+@import "./common.css";
+
+/*统一设置样式开始*/
+a {
+  color: #41ac52;
+}
+input[type="text"],
+input[type="password"] {
+  width: 100%;
+  height: 34px;
+  padding: 1px 2px 1px 10px;
+  border: 1px solid #e4e6e5;
+  box-sizing: border-box;
+  border-radius: 4px;
+  font-size: 13px;
+}
+.txt {
+  height: 24px;
+  line-height: 24px;
+  font-size: 12px;
+}
+.container {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  padding: 30px 10px 10px;
+  color: #9b9b9b;
+}
+.logo .switch-menu {
+  height: 26px;
+  line-height: 26px;
+  border-bottom: 1px solid #ececec;
+  font-size: 13px;
+}
+.logo .switch-menu span {
+  width: 50%;
+  height: 100%;
+  text-align: center;
+}
+.logo .switch-menu span.selected {
+  border-bottom: 1px solid #494949;
+  color: #333;
+  font-weight: bold;
+}
+.logo .form .form-item {
+  position: relative;
+  margin: 10px 0;
+  font-size: 13px;
+}
+.logo .form .form-item .txt {
+  height: 24px;
+  line-height: 24px;
+  font-size: 12px;
+}
+/*更多的缩进*/
+.logo .form .form-item input.more-text-indent {
+  padding: 1px 2px 1px 60px;
+}
+.logo .form .form-item .country-code {
+  position: absolute;
+  left: 0;
+  top: 5px;
+  width: 51px;
+  height: 26px;
+  border-right: 1px solid #e4e6e5;
+  color: #333;
+  text-align: center;
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 26px;
+  cursor: pointer;
+}
+.logo .form .form-item .country-code .choose-area {
+  /*铺满整个视口，背景为半透明的白色*/
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.5);
+  left: 0;
+  top: 0;
+  z-index: 1;
+}
+.logo .form .form-item .country-code .choose-area .center {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  width: 285px;
+  height: 225px;
+  border: 1px solid #bbb;
+  box-sizing: border-box;
+  border-radius: 4px;
+  background-color: #fff;
+  cursor: auto; /*让浏览器决定鼠标样式*/
+}
+.logo .form .form-item .country-code .choose-area .close {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  color: #b4b4b4;
+  cursor: pointer;
+}
+.logo .form .form-item .country-code .choose-area .close:hover {
+  color: #fab0b6;
+}
+.logo .form .form-item .country-code .choose-area .center .title {
+  padding: 10px 10px 6px;
+  background-color: #ebf5eb;
+  border-radius: 4px 4px 0 0;
+  font-size: 16px;
+  text-align: left;
+}
+.logo .form .form-item .country-code .choose-area .center .title h3 {
+  color: #060;
+  padding-right: 40px;
+  padding-left: 4px;
+}
+.logo .form .form-item .country-code .choose-area .center ul {
+  height: 150px;
+  padding: 15px;
+  overflow: auto;
+}
+.logo .form .form-item .country-code .choose-area .center ul li:first-child {
+  border-top: 1px solid #e5e5e5;
+}
+.logo .form .form-item .country-code .choose-area .center ul li {
+  height: 36px;
+  border-bottom: 1px solid #e5e5e5;
+  color: #494949;
+  line-height: 2.6;
+  font-size: 14px;
+  cursor: pointer;
+}
+/* .logo .form .form-item .country-code .choose-area .center ul li .left {
+  width: 56px;
+  height: 36px;
+} */
+.logo .form .form-item .country-code .choose-area .center ul li .right {
+  color: #aaa;
+  font-weight: normal;
+}
+.logo .form .form-item .country-code .choose-area .center ul li.selected {
+  color: #42bd56;
+}
+.logo
+  .form
+  .form-item
+  .country-code
+  .choose-area
+  .center
+  ul
+  li.selected
+  .right {
+  color: inherit;
+}
+.logo .form .form-item .ab-right {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 85px;
+  height: 35px;
+  line-height: 35px;
+  text-align: center;
+  color: #41ac52;
+}
+.logo .form .form-item .btn {
+  width: 100%;
+  height: 34px;
+  font-size: 15px;
+}
+.logo .form .form-item.tip {
+  font-size: 12px;
+}
+.logo .form .form-item.tip .left input {
+  width: 13px;
+  height: 13px;
+}
+.logo .bottom {
+  height: 32px;
+  line-height: 32px;
+  border-top: 1px solid #ddd;
+}
+.logo .bottom .msg {
+  font-size: 12px;
+  color: #9b9b9b;
+}
+.logo .bottom i.icon-weixin {
+  color: #34950e;
+  margin: 0 12px;
+}
+.logo .bottom i.icon-weibo1 {
+  color: #ea5d5c;
+}
+/*扫码登录区域样式*/
+.qrcode {
+  font-size: 13px;
+  cursor: auto;
+}
+.qrcode .title {
+  height: 26px;
+  line-height: 26px;
+  border-bottom: 1px solid #ececec;
+  color: #333;
+  font-weight: bold;
+}
+.qrcode .code {
+  margin-top: 20px;
+  text-align: center;
+  font-size: 0;
+}
+.qrcode .code img {
+  width: 170px;
+  height: 170px;
+}
+.qrcode .code .tip {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 3px 20px;
+  color: #494949;
+  background-color: rgba(0, 0, 0, 0.08);
+  border-radius: 12px;
+  font-size: 13px;
+  line-height: 1.5;
+}
+/*扫码切换的小图标*/
+.container .change {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  width: 30px;
+  height: 30px;
+}
+.container .change .icon {
+  display: block;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+}
+.container .change .icon-qrcode {
+  background: url("../img/icon-qrcode.png") no-repeat left top/100% 100%;
+}
+.container .change .icon-pc {
+  background: url("../img/icon-pc.png") no-repeat left top/100% 100%;
+}
+.container .change:hover + .pointer {
+  display: block;
+}
+/*扫码登陆*/
+.container .pointer {
+  position: absolute;
+  right: 50px;
+  top: 10px;
+  height: 28px;
+  line-height: 28px;
+  padding: 0 5px;
+  border: 1px solid rgba(66, 189, 86, 0.3);
+  font-size: 13px;
+  color: #666;
+  background-color: #f5faf9;
+  border-radius: 5px;
+}

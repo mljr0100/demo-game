@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>手风琴</title>
+    <style>
+      .container {
+        width: 300px;
+        margin: 0 auto;
+      }
+      .container .menu {
+        padding: 10px 0;
+      }
+      .container .menu h2 {
+        padding: 5px 6px;
+        font-size: 16px;
+        font-weight: normal;
+        background-color: #f0f0f0;
+        border: 1px solid #e0e0e0;
+        color: #666;
+        margin: 0;
+        cursor: pointer;
+      }
+      .container .menu .item {
+        padding-left: 20px;
+        display: none;
+        overflow: hidden;
+      }
+      .container .menu .item.active {
+        display: block;
+      }
+      .container .menu .item a {
+        display: block;
+        text-decoration: none;
+        font-size: 14px;
+        line-height: 2;
+        border-bottom: 1px solid #ccc;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="menu">
+        <h2>杀破狼</h2>
+        <div class="item">
+          <a href="">未知苦处，不信神佛</a>
+          <a href="">经年痴心妄想，一时走火入魔</a
+          ><a href="">信不信在你，渡不渡在我</a
+          ><a href="">岂敢托荫于先辈，苟全于先人</a
+          ><a href="">何人知我霜雪催，何人与我共一醉</a>
+        </div>
+      </div>
+      <div class="menu">
+        <h2>默读</h2>
+        <div class="item">
+          <a href="">我不是凝视深渊的人，我就是深渊</a>
+          <a href="">一旦生死相隔,人间的荣与辱,便都鞭长莫及了</a
+          ><a href="">但执迷不悟，那就没有意义了</a
+          ><a href="">僻静本身并不值钱，闹中取静才值钱</a
+          ><a href="">活人可以念念不忘，那是情感寄托</a>
+        </div>
+      </div>
+      <div class="menu">
+        <h2>将进酒</h2>
+        <div class="item active">
+          <a href="">先生授我以诗书，我为先生杀宿仇</a>
+          <a href="">兰舟啊，樊笼已破，乱世必起</a>
+          <a href="">先生能教给你的，都已经全部教完了</a
+          ><a href="">这烂天烂地，不如翻了它，去成就你的天地</a
+          ><a href="">中人之姿，各位抬爱了</a>
+        </div>
+      </div>
+      <div class="menu">
+        <h2>天官赐福</h2>
+        <div class="item">
+          <a href="">太子殿下，让我来教导你吧</a>
+          <a href="">我去你妈的！你以为你是谁？</a
+          ><a href="">你怎么敢这样和我讲话，我可是太子殿下</a
+          ><a href="">我命由我不由天，没有的命我自己改</a
+          ><a href="">就要日落了，拿起你的剑</a>
+        </div>
+      </div>
+      <div class="menu">
+        <h2>魔道祖师</h2>
+        <div class="item">
+          <a href="">蓝湛，含光君，我喜欢你，心悦你</a>
+          <a href="">问灵十三载，等一不归人</a>
+          <a href="">未知全貌，不予置评</a>
+          <a href="">我想带一人回云深不知处</a>
+          <a href="">带回去，藏起来</a>
+        </div>
+      </div>
+    </div>
+    <script src="../plugin/helpers.js"></script>
+    <script src="../plugin/animate.js"></script>
+    <script src="index.js"></script>
+  </body>
+</html>

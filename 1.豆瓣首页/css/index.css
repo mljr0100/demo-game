@@ -1,0 +1,764 @@
+/*统一样式开始*/
+body {
+  line-height: 2;
+}
+a {
+  color: #37a;
+}
+a:hover {
+  background-color: #37a;
+  color: #fff;
+}
+a:active {
+  background-color: #f93;
+  color: #fff;
+}
+ul {
+  word-break: break-all;
+}
+/*统一样式结束*/
+
+/*首页通用样式开始*/
+.container {
+  width: 950px;
+  margin: 0 auto;
+}
+.section {
+  padding: 35px 0;
+}
+.section:nth-child(even) {
+  background-color: #f7f7f7;
+}
+.aside-left {
+  float: left;
+  width: 100px;
+  margin-right: 20px;
+}
+.aside-left .title {
+  font-size: 24px;
+  color: #000;
+}
+.dark-color {
+  color: #494949;
+}
+.blue-color {
+  color: #37a;
+}
+.aside-right {
+  float: right;
+  width: 265px;
+  margin-left: 30px;
+}
+.main {
+  /*创建BFC*/
+  overflow: hidden;
+}
+img {
+  display: block;
+  width: 100%;
+}
+.adv {
+  width: 265px;
+}
+.section-title {
+  margin: 12px 0;
+  height: 32px;
+}
+.section-title .title {
+  display: inline;
+  color: #072;
+  font-size: 15px;
+}
+.section-title .title::after {
+  content: " · · · · · · ";
+}
+.section-title .link {
+  font-size: 12px;
+}
+.section-title .link::before {
+  content: "(";
+}
+.section-title .link::after {
+  content: ")";
+}
+.adv-tag::after {
+  content: "广告";
+  color: rgb(201, 201, 201);
+  font-size: 13px;
+}
+
+.item-list {
+  text-align: justify;
+  line-height: 1.5;
+}
+.item-list::after {
+  content: "";
+  display: inline-block;
+  width: 100%;
+}
+.item-list li {
+  display: inline-block;
+  vertical-align: top;
+}
+.item-list li .words span {
+  color: #999;
+}
+.left-menu {
+  font-size: 14px;
+}
+.left-menu li a {
+  position: relative;
+}
+.left-menu li a.new::after {
+  content: "";
+  background: url("../img/new_menu.gif") no-repeat;
+  width: 17px;
+  height: 7px;
+  position: absolute;
+  top: 2px;
+  right: -20px;
+}
+.right-menu-list li {
+  float: left;
+  font-size: 12px;
+}
+.block-link {
+  display: inline-block;
+  padding: 2px 10px;
+  border-radius: 3px;
+}
+.group .right-menu-list li {
+  margin-right: 6px;
+}
+.menu-adv {
+  margin-top: 20px;
+  font-size: 12px;
+}
+.menu-adv .app-icon {
+  width: 50px;
+  height: 50px;
+  display: block;
+  background: url("../img/app_icons.jpg") no-repeat;
+  border-radius: 10px;
+  box-shadow: 1px 1px 1px 0 #999;
+}
+.group .group-name {
+  font-size: 14px;
+}
+.group .group-name a {
+  color: #333;
+}
+.group .group-name a:hover {
+  color: #fff;
+}
+.group .group-name a::after {
+  content: "»";
+}
+/*有差异的可以单独调整*/
+/*首页通用样式结束*/
+
+/*页头开始*/
+.header {
+  height: 90px;
+  padding: 30px 0;
+  box-sizing: border-box;
+}
+.header .container {
+  height: 32px;
+}
+.header .logo {
+  width: 154px;
+  height: 30px;
+}
+.header .logo a {
+  display: inline-block;
+  width: 154px;
+  background: url("../img/logo_db.png") no-repeat center top/100%;
+  height: 0;
+  padding-top: 30px;
+  overflow: hidden;
+}
+.header .search {
+  position: relative;
+  width: 270px;
+  height: 30px;
+  border: 1px solid #c3c3c3;
+  margin-left: 20px;
+}
+.header .search .txt {
+  width: 240px;
+  height: 20px;
+  padding: 5px;
+  font-size: 13px;
+}
+.header .search .txt::placeholder {
+  color: #ccc;
+}
+.header .search button {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 30px;
+  height: 30px;
+  padding: 0;
+  color: #c3c3c3;
+}
+.header .menu {
+  margin-top: 6px;
+}
+.header .menu a {
+  float: left;
+  width: 40px;
+  height: 20px;
+  margin-left: 20px;
+  background: url("../img/nav_logo.png") no-repeat left top/463px 20px;
+  background-color: #fff;
+}
+.header .menu a.menu-movie {
+  background-position: -60px;
+}
+.header .menu a.menu-music {
+  background-position: -120px;
+}
+.header .menu a.menu-group {
+  background-position: -180px;
+}
+.header .menu a.menu-fm {
+  background-position: -240px;
+}
+.header .menu a.menu-city {
+  background-position: -300px;
+}
+.header .menu a.menu-thing {
+  background-position: -360px;
+}
+.header .menu a.menu-doupin {
+  background-position: -420px;
+  width: 44px;
+}
+
+/*页头结束*/
+
+/*横幅区域开始*/
+.banner {
+  height: 304px;
+  background: url("../img/banner-bg.jpg") no-repeat left top/contain;
+  background-color: #edf4ed;
+}
+.banner .container .loginarea {
+  width: 300px;
+  height: 300px;
+}
+.banner .container .solgan {
+  margin-top: 100px;
+  margin-right: 32px;
+}
+.banner .container .solgan .title {
+  font-size: 25px;
+  margin: 7px 0;
+  color: #111;
+}
+.banner .container .solgan .title span {
+  margin-left: 10px;
+}
+.banner .container .solgan .download {
+  margin-top: 20px;
+}
+.banner .container .solgan .download .btn {
+  width: 115px;
+  height: 30px;
+  line-height: 30px;
+  font-size: 12px;
+  border-radius: 2px;
+}
+.banner .container .solgan .download .qrcode {
+  position: relative;
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  border: 1px solid #48aa0d;
+  box-sizing: border-box;
+  border-radius: 2px;
+  vertical-align: bottom;
+}
+.banner .container .solgan .download .qrcode img {
+  width: 100%;
+  height: 100%;
+}
+.banner .container .solgan .download .qrcode .qrcode-img {
+  position: absolute;
+  left: -1px;
+  top: -1px;
+  width: 200px;
+  height: 226px;
+  padding: 20px 20px 5px;
+  box-sizing: border-box;
+  border-radius: 2px;
+  color: #666;
+  font-size: 13px;
+  line-height: 13px;
+  background-color: #fff;
+  text-align: center;
+}
+.banner .container .solgan .download .qrcode .qrcode-img img {
+  width: 160px;
+  height: 160px;
+}
+.banner .container .solgan .download .qrcode .qrcode-img p {
+  margin: 13px 0;
+}
+.banner .container .solgan .download .qrcode:hover .qrcode-img {
+  display: block;
+}
+/*横幅区域结束*/
+/*主区域样式开始*/
+/*热点区域开始*/
+.hot-list {
+  line-height: 1.5;
+}
+.hot-list li {
+  margin-bottom: 15px;
+}
+.hot-list li .title {
+  font-size: 14px;
+}
+.hot-list li .desc {
+  font-size: 13px;
+  color: #aaa;
+}
+.hot-list li .desc span {
+  margin-right: 4px;
+}
+.hot-main .left {
+  width: 350px;
+}
+.hot-main .left .item-list li {
+  width: 170px;
+  margin: 10px 0;
+}
+.hot-main .right {
+  width: 275px;
+  font-size: 12px;
+}
+.hot-main .right li {
+  margin-bottom: 12px;
+}
+.hot-main .right li .title {
+  color: #999;
+}
+.hot-main .right li .desc {
+  color: #666;
+}
+/*热点区域结束*/
+/*豆瓣时间区域开始*/
+.time-main .item-list li {
+  width: 100px;
+  margin: 0 60px 30px 0;
+  text-align: center;
+}
+.time-main .item-list li .words a {
+  font-size: 13px;
+  color: #333;
+}
+.time-main .item-list li .words a:hover {
+  color: #fff;
+}
+.time-main .item-list li .words span {
+  display: block;
+  margin-top: 10px;
+  font-size: 12px;
+}
+/*豆瓣时间区域结束*/
+/*视频区域开始*/
+.video-main .section-title a:hover {
+  background-color: initial;
+}
+.video-main .item-list li {
+  width: 250px;
+  margin-right: 30px;
+}
+.video-main .item-list li:nth-child(3n) {
+  margin-right: 0;
+}
+.video-main .item-list li .img {
+  position: relative;
+}
+.video-main .item-list li .img::before {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+  color: #fff;
+  text-align: center;
+  line-height: 144px;
+  font-size: 35px;
+}
+.video-main .item-list li .words a {
+  font-size: 13px;
+}
+/*视频区域结束*/
+
+/*豆瓣电影区域开始*/
+.movie-area .right-menu-list li {
+  width: 48px;
+  height: 24px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.order-movie-list {
+  list-style-type: decimal;
+  list-style-position: inside;
+}
+.order-movie-list li {
+  margin-bottom: 6px;
+  border-bottom: 1px solid #eaeaea;
+}
+.order-movie-list li a {
+  margin-left: 5px;
+}
+.movie-main .item-list li {
+  width: 100px;
+  margin: 0 38px 40px 0;
+  text-align: center;
+  font-size: 13px;
+}
+.movie-main .item-list li:nth-child(4n) {
+  margin-right: 0;
+}
+.movie-main .item-list li a {
+  display: inline-block;
+  max-width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: #333;
+}
+.movie-main .item-list li a:hover {
+  color: #fff;
+}
+.movie-main .item-list li .func {
+  margin-top: 7px;
+}
+.movie-main .item-list li .func .block-link {
+  background-color: #1c8bd0;
+  color: #fff;
+}
+.movie-main .item-list li .func .block-link:hover {
+  background-color: #047fcb;
+}
+/*豆瓣电影区域结束*/
+/*豆瓣小组区域开始*/
+.group-area a {
+  color: #017a85;
+}
+.group-area a:hover {
+  color: #fff;
+}
+.group-main .item-list li {
+  width: 248px;
+  margin-bottom: 30px;
+  font-size: 13px;
+}
+.group-main .item-list li .img {
+  float: left;
+  width: 48px;
+  margin-right: 15px;
+}
+.group-main .item-list li .words {
+  /*创建BFC区域，BFC元素的边框盒会避开浮动盒子*/
+  overflow: hidden;
+}
+.group-main .item-list li .words span {
+  display: block;
+  color: #999;
+  font-size: 12px;
+  margin-top: 5px;
+}
+/*豆瓣小组区域结束*/
+
+/*豆瓣读书区域开始*/
+.book-area a.brown-color {
+  color: #4a2f14;
+}
+.book-area a {
+  color: #494949;
+}
+.book-area a:hover {
+  color: #fff;
+}
+.menu-adv .app-icon-1 {
+  background-position: 0 0;
+}
+.book-area .group {
+  padding: 10px 0;
+  border-bottom: 1px solid #eaeaea;
+  font-size: 12px;
+  line-height: 1.5em;
+}
+.book-area .group:last-child {
+  border-bottom: none;
+}
+.book-area .group li span {
+  color: #999;
+}
+.book-main .item-list li {
+  width: 100px;
+  margin-right: 38px;
+  text-align: center;
+  font-size: 13px;
+}
+.book-main .item-list li:nth-child(4n) {
+  margin-right: 0;
+}
+.book-main .item-list li a {
+  display: inline-block;
+  max-width: 100%;
+  margin-top: 5px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.book-main .item-list li span {
+  display: block;
+  color: #111;
+  font-size: 12px;
+  margin-top: 5px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.book-main .item-list li .func .block-link {
+  background-color: #999a95;
+  color: #fff;
+}
+.book-main .item-list li .func .block-link:hover {
+  background-color: #878882;
+}
+/*豆瓣读书区域结束*/
+
+/*豆瓣音乐区域开始*/
+.music-area a {
+  color: #555d53;
+}
+.music-area a:hover,
+.music-area a:active {
+  color: #fff;
+}
+.music-area .aside-left .title a {
+  color: #f38c00;
+}
+.music-area .aside-left .title a:hover,
+.music-area .aside-left .title a:active {
+  color: #fff;
+}
+.music-area .aside-left .menu-adv .app-icon-2 {
+  background-position: -250px 0;
+}
+.music-area .aside-left .menu-adv .app-icon-3 {
+  background-position: -50px 0;
+}
+.order-music-list li {
+  margin-bottom: 15px;
+  font-size: 12px;
+  line-height: 1.5;
+}
+.order-music-list li .player {
+  width: 250px;
+}
+.order-music-list li .player .img {
+  position: relative;
+  float: left;
+  margin: 0 10px;
+  width: 48px;
+  height: 48px;
+}
+.order-music-list li .player .img::before {
+  display: none;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.3);
+  font-size: 23px;
+  line-height: 48px;
+  text-align: center;
+  color: #fff;
+}
+.order-music-list li .player .img:hover::before {
+  display: block;
+}
+.order-music-list li .player .words {
+  overflow: hidden;
+}
+.order-music-list li .player .words span {
+  display: block;
+  color: #999;
+}
+.music-area .item-list li {
+  width: 130px;
+  text-align: center;
+  font-size: 12px;
+  margin-bottom: 10px;
+}
+.music-area .item-list li .img {
+  width: 80px;
+  margin: 0 auto;
+}
+.music-area .item-music li .words {
+  margin: 5px 0;
+}
+.music-area .hot-music {
+  text-align: initial;
+}
+.music-area .hot-music li .img {
+  position: relative;
+}
+.music-area .hot-music li .img::before {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  text-align: center;
+  line-height: 40px;
+  font-size: 33px;
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.4);
+  border-radius: 50%;
+}
+.music-area .hot-music li .words {
+  font-size: 13px;
+  margin: 8px 0;
+}
+/*豆瓣音乐区域结束*/
+/*豆品区域开始*/
+.doupin-area a {
+  color: #3377a9;
+}
+.doupin-area a:hover,
+.doupin-area a:active {
+  color: #fff;
+}
+.doupin-area .aside-left h2 a {
+  color: #1f9432;
+}
+.doupin-area .aside-left h2 a:hover,
+.doupin-area .aside-left h2 a:active {
+  color: #fff;
+}
+.right-doupin-list li {
+  margin-bottom: 10px;
+}
+.right-doupin-list li .words a {
+  font-size: 14px;
+  line-height: 1.4em;
+  margin-bottom: 10px;
+}
+.right-doupin-list li p {
+  font-size: 12px;
+  color: #6a6a6a;
+}
+.doupin-area .main .item-list li {
+  width: 240px;
+  margin: 0 20px 30px 0;
+}
+.doupin-area .main .item-list li:nth-child(even) {
+  margin-right: 0;
+}
+.doupin-area .main .item-list li .img {
+  width: 240px;
+  height: 240px;
+}
+.doupin-area .main .item-list li .words {
+  margin-top: 10px;
+}
+.doupin-area .main .item-list li span {
+  color: #e55457;
+}
+/*豆品区域结束*/
+
+/*同城区域开始*/
+.city-area a {
+  color: #643;
+}
+.city-area a:hover,
+.city-area a:active {
+  color: #fff;
+}
+.city-area .aside-left .title a {
+  color: #ec5303;
+}
+.city-area .aside-left .title a:hover,
+.city-area .aside-left .title a:active {
+  color: #fff;
+}
+.city-area .item-list li {
+  width: 248px;
+  margin: 0 20px 60px 0;
+  font-size: 13px;
+}
+.city-area .item-list li:nth-child(even) {
+  margin-right: 0;
+}
+.city-area .item-list li .img {
+  float: left;
+  width: 70px;
+  height: 90px;
+  margin-right: 10px;
+}
+.city-area .item-list li .words {
+  /*创建BFC区域，BFC元素的边框盒会避开浮动盒子*/
+  overflow: hidden;
+}
+.city-area .item-list li .words span {
+  display: block;
+  color: #666;
+  font-size: 12px;
+  line-height: 1.7;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+/*同城区域结束*/
+/*主区域样式结束*/
+/*页脚区域开始*/
+.footer .container {
+  font-size: 12px;
+  line-height: 1.5;
+  color: #999;
+  border-top: 1px dashed #dcdcdc;
+  padding-top: 15px;
+  padding-bottom: 30px;
+}
+.footer .container a {
+  color: #37a;
+}
+.footer .container a:hover {
+  background-color: #37a;
+  color: #fff;
+}
+.footer .container a:active {
+  background-color: #f93;
+  color: #fff;
+}
+.footer .left {
+  width: 50%;
+}
+.footer .left img {
+  display: inline;
+  width: 15px;
+  vertical-align: middle;
+}
+.footer .right {
+  width: 50%;
+}
+.footer .right .adv {
+  margin-top: 20px;
+  width: 150px;
+}
+/*页脚区域结束*/

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .move {
+        width: 100px;
+        height: 100px;
+        background-color: #f40;
+        border-radius: 50%;
+        position: absolute;
+        left: 50px;
+        top: 50px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="move"></div>
+    <script src="../plugin/helpers.js"></script>
+    <script src="../plugin/animate.js"></script>
+    <script>
+      var move = document.querySelector(".move");
+      var animate = new myPlugin.Animate({
+        duration: 30, //动画间隔时间
+        total: 2000, //动画总时间
+        begin: {
+          left: 50,
+          top: 50,
+        }, //开始数据
+        end: {
+          left: 600,
+          top: 400,
+        }, //结束数据
+        onstart: function () {
+          console.log("开始");
+        },
+        onmove: function (data) {
+          //参数：实现若碰到边界某数值变为相反数
+          //   console.log(data);
+          move.style.left = data.left + "px";
+          move.style.top = data.top + "px";
+        },
+        onend: function () {
+          console.log("结束");
+        },
+      });
+      console.log(animate);
+    </script>
+  </body>
+</html>

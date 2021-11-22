@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        font-family: "Courier New", Courier, monospace;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+      }
+      #wrapper {
+        position: relative;
+        width: 500px;
+        height: 320px;
+        border: 1px solid;
+        margin: 100px auto;
+        overflow: hidden;
+      }
+
+      #wrapper #box {
+        position: absolute;
+        display: flex;
+        left: 0;
+        transition: left 1s linear;
+      }
+
+      #wrapper #box img {
+        width: 500px;
+        height: 320px;
+        flex-shrink: 0;
+        object-fit: cover;
+      }
+
+      #l,
+      #r {
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        font-size: 30px;
+        background-color: red;
+        font-weight: 700;
+        width: 30px;
+        text-align: center;
+        cursor: pointer;
+      }
+
+      #r {
+        left: auto;
+        right: 0;
+      }
+
+      #dot {
+        display: flex;
+        position: absolute;
+        bottom: 10px;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 999;
+      }
+
+      .dot-item {
+        margin: 10px;
+        width: 15px;
+        height: 15px;
+        border-radius: 50%;
+        background-color: aliceblue;
+        cursor: pointer;
+      }
+
+      .active {
+        background-color: aqua;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="wrapper">
+      <div id="box">
+        <img src="./img/1.jpg" alt="" />
+        <img src="./img/2.jpg" alt="" />
+        <img src="./img/3.jpg" alt="" />
+        <img src="./img/4.jpg" alt="" />
+        <img src="./img/1.jpg" alt="" />
+      </div>
+      <i id="l">&lt;</i><i id="r">&gt;</i>
+      <ul id="dot">
+        <li class="dot-item active" data-index="0"></li>
+        <li class="dot-item" data-index="1"></li>
+        <li class="dot-item" data-index="2"></li>
+        <li class="dot-item" data-index="3"></li>
+      </ul>
+    </div>
+    <script>
+      const oBox = document.getElementById("box");
+      const oWrap = document.getElementById("wrapper");
+      const oL = document.getElementById("l");
+      const oR = document.getElementById("r");
+      const oDot = document.getElementById("dot");
+      const oDotItem = document.getElementsByClassName("dot-item");
+
+      let index = 0;
+      let timer = null;
+      flag = true;
+
+      function changeDotColor(index) {
+        document.getElementsByClassName("active")[0].classList.remove("active");
+        if (index === 4) {
+          oDotItem[0].classList.add("active");
+        } else {
+          oDotItem[index].classList.add("active");
+        }
+      }
+
+      function run(index) {
+        oBox.style.transition = "left 1s linear";
+        oBox.style.left = `${-500 * index}px`;
+      }
+
+      function toLeft() {
+        if (!flag) return;
+        flag = false;
+        if (index === 0) {
+          index = 4;
+          oBox.style.transition = "none";
+          oBox.style.left = `${-500 * index}px`;
+        }
+        document.body.offsetHeight;
+        index--;
+        run();
+        changeDotColor(index);
+      }
+
+      function toRight() {
+        if (!flag) return;
+        flag = false;
+        index++;
+        run();
+        changeDotColor(index);
+      }
+
+      function autoPlay() {
+        timer = setInterval(toRight, 1500);
+      }
+
+      oDot.onclick = (e) => {
+        const target = e.target;
+        if (target.tagName === "LI") {
+          const index = target.getAttribute("data-index");
+          run(index);
+          changeDotColor(index);
+        }
+      };
+
+      oWrap.onmousemove = () => clearInterval(timer);
+
+      oWrap.onmouseleave = autoPlay;
+
+      oL.onclick = toLeft;
+
+      oR.onclick = toRight;
+
+      oBox.ontransitionend = () => {
+        if (index === 4) {
+          oBox.style.transition = "none";
+          oBox.style.left = 0;
+          index = 0;
+        }
+        flag = true;
+      };
+    </script>
+  </body>
+</html>
