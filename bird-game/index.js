@@ -162,12 +162,6 @@ pipeManager.moveTimer = getTimer(16, pipeManager, function () {
   for (var i = 0; i < this.pairs.length; i++) {
     var pair = this.pairs[i];
     pair.left -= 2;
-    // if (pair.left < bird.left - Pipe.width) {
-    //   //积分+1
-    //   game.score++;
-    //   console.log(game.scoreDom);
-    //   game.scoreDom.children[0].innerHTML = game.score;
-    // }
 
     if (pair.left < -Pipe.width) {
       this.pairs.splice(i, 1);
